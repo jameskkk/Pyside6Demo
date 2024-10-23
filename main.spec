@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='main',
+    name='PySideDemo',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -35,4 +35,11 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='nkg.ico',
+    version="file_version.txt"
 )
+
+app = BUNDLE(exe,
+           name='PySideDemo',
+           version='file_version.txt',
+           icon='nkg.ico')
