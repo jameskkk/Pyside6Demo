@@ -1,0 +1,7 @@
+# UTF-8
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    filevers=(1, 0, 0, 1),
+    prodvers=(1, 0, 0, 1),
+    ...
+)

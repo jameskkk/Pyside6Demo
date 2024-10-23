@@ -2,12 +2,12 @@ import sys
 import PySide6.QtCore
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLabel
-from ui_main_window import Ui_MainWindow
+from main_window_ui import Ui_MainWindow
 
 class HBMainWindowManual:
     def __init__(self):
         loader = QUiLoader()
-        self.ui = loader.load("main_window.ui")
+        self.ui = loader.load("ui_main_window.ui")
 
 class HBMainWindowAuto(QMainWindow):
     def __init__(self):
