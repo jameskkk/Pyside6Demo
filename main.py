@@ -1,17 +1,26 @@
+"""Application entrance."""
+
 import sys
+import dataclasses
 import PySide6.QtCore
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 from ui.main_window_ui import Ui_MainWindow
 
 
+@dataclasses.dataclass
 class HBMainWindowManual:
+    """QUiLoader .ui"""
+
     def __init__(self):
         loader = QUiLoader()
         self.ui = loader.load("ui_main_window.ui")
 
 
+@dataclasses.dataclass
 class HBMainWindowAuto(QMainWindow):
+    """Setup .ui"""
+
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
@@ -19,6 +28,8 @@ class HBMainWindowAuto(QMainWindow):
         self.ui.btnOK.clicked.connect(self.say_ok)
 
     def say_ok(self):
+        """QMessageBox show"""
+
         message_box = QMessageBox(self)
         message_box.setWindowTitle("MessageBox")
         message_box.setText("Enter OK and Cancel?")
