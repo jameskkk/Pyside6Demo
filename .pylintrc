@@ -1,0 +1,8 @@
+[MASTER]
+ignore=ui
+ignore-paths=ui
+max-line-length=128
+extension-pkg-whitelist=PySide6
+
+[MESSAGES CONTROL]
+disable=E0401,C0103

@@ -7,3 +7,13 @@ repos:
           - --max-line-length=128
           - --ignore=E501,E402
           - --exclude=ui/*
+
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a5
+    hooks:
+      - id: pylint
+        args:
+          - --max-line-length=128
+          - --ignore=ui
+          - --ignore-paths=ui
+          - --extension-pkg-whitelist=PySide6
