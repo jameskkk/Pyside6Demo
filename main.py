@@ -1,13 +1,15 @@
 import sys
 import PySide6.QtCore
 from PySide6.QtUiTools import QUiLoader
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QLabel
-from main_window_ui import Ui_MainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from ui.main_window_ui import Ui_MainWindow
+
 
 class HBMainWindowManual:
     def __init__(self):
         loader = QUiLoader()
         self.ui = loader.load("ui_main_window.ui")
+
 
 class HBMainWindowAuto(QMainWindow):
     def __init__(self):
@@ -22,13 +24,14 @@ class HBMainWindowAuto(QMainWindow):
         message_box.setText("Enter OK and Cancel?")
         message_box.setIcon(QMessageBox.Information)
         message_box.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
-        
+
         response = message_box.exec()
 
         if response == QMessageBox.Ok:
             print("Enter OK!")
         else:
             print("Enter Cancel!")
+
 
 if __name__ == "__main__":
     # Prints PySide6 version
